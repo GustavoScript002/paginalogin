@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 9</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <h1>AGENDA DE CONTATOS</h1></a>
+    </header>
+    <section id="container-pai">
+        <div id="container-filho">
+            <p>LOGO</p>
+        </div>
+        <div class="input1">
+            <input type="text" id="usuario" placeholder="USUÁRIO">
+            <input type="password" id="senha" placeholder="SENHA">
+            <button id="botão-entrar" onclick="validarLogin()">ENTRAR</button>
+        </div>
+    </section>
+
+    <script>
+        function validarLogin() {
+            const usuario = document.getElementById("usuario").value.trim();
+            const senha = document.getElementById("senha").value.trim();
+
+            if (usuario === "admin" && senha === "admin") {
+                window.location.href = "cadastro.html";
+            } else {
+                alert("Usuário ou senha incorretos.");
+            }
+        }
+    </script>
+</body>
+
+</html>
